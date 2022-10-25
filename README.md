@@ -71,6 +71,12 @@ To standardize display, we defined a set of colors for taxa.
 
 #### Figure S2: Within individual Boxplots (`05-Individual-Similarity-Boxplots.ipynb`)
 
+#### Figure S3: Subject CTF PCA and Table S3 (`06-Pairedr-PCA-Subject-Specific.ipynb`)
+
+#### Figure 1: Comparison of tumor and normal tissue (`07-Paired-rPCA-Tissue-Seperation.ipynb`)
+Also generates Table S4 and supplemental file 
+
+#### Table S5: Survival by difference in beta diversity metrics (`08-Beta-Survival.ipynb`)
 
 
 
