@@ -6,19 +6,15 @@ Analysis for Debelius et al, "The local tumor microbiome is associated with surv
 
 Raw sequence data and mdetata can be found on ENA under accession <Accession>. 
 
-# Sample Processing
-
-The data for this project was processed through 2 platforms. The patient characterstics (table 1 and table s1) were generated through Stata. Microbiome data was analyzed using qiime2 within a conda enviroment.
-
-## Stata
+# Stata
 
 The stata script is in the `stata` folder. The code should be runable on the `metadata_paired.tsv` files in the `ipynb/data/` folder.
 
-## Jupyter notebooks
+# Jupyter notebooks
 
 Microbiome data was prepared and processed through Jupyter notebooks.
 
-### Installation
+## Installation
 
 This code was initially run in a qiime2-2022.11 enviroment with plugins for [gemelli](https://library.qiime2.org/plugins/gemelli/28/), [DEICODE](), and [empress](). 
 
@@ -35,7 +31,7 @@ qiime dev refresh-cache
 
 [Jupyter lab](https://jupyter.org/install) may be optionally installed to make Jupyter notebook handling functional, although it should not be required.
 
-#### PyStan
+### PyStan
 
 Differential ranking requires [pystan](https://pystan.readthedocs.io/en/latest/index.html); we used pystan 3.4. This is operation system dependent; our group was able to get pystan to work with Mac OS 15.2 but unable to coerce it on a linus system. (If you dont want to experiment with the pystan run, the files are included.)
 
@@ -43,19 +39,19 @@ Differential ranking requires [pystan](https://pystan.readthedocs.io/en/latest/i
 pip install pystan=3.4
 ```
 
-### Data Processing and analysis
+## Data Processing and analysis
 
-#### Preprocessing and processing
+### Preprocessing and processing
 
-##### Feature Table Construction
+#### Feature Table Construction
 
 The microbiome data was denoised using the standardized pipeline in CTMR bio Amplicon workflow](https://github.com/ctmrbio/Amplicon_workflows). The dada2 denoised text table was used; the original table can be found in the `ipynb/data/raw_data` directory.
 
-##### Import into qiime2 (`01-Parse-dada2-Table.ipynb`)
+#### Import into qiime2 (`01-Parse-dada2-Table.ipynb`)
 
 The notebook parases the dada2 table for qiime2. It also filters the table to match the metadata and removes features with undefined depths.
 
-##### Diversity Calculations (`02.02-Generate-Diversity.ipynb`)
+#### Diversity Calculations (`02.02-Generate-Diversity.ipynb`)
 
 The notebook performs fragment insertion into the [Silva 128 fragment insertion backbone](https://docs.qiime2.org/2022.8/data-resources/#sepp-reference-databases) and uses the phylogenetic tree to construct a feature table. 
 
@@ -63,15 +59,17 @@ The feature table is rarefied to 2500 sequences/sample. Alpha diveristy (observe
 
 We also generated the complex tensor factorization (CTF) via Gemelli and rPCA via DEICODE.
 
-##### Stan Differential ranking (`03-Stan-Ranking.ipynb`)
+#### Stan Differential ranking (`03-Stan-Ranking.ipynb`)
 
 Stan differential rankings are calculated using a linear mixed effects model. If you are unable to get stan to work on your system (or just don't like sleeping with your laptop overnight), output files are in the `data/differential_ranking` folder.
 
-#### Analysis
+### Analysis
 
 To standardize display, we defined a set of colors for taxa.
 
-##### Figure S1: Taxonomic Barplot (`04-Taxonomic-barplot.ipynb`)
+#### Figure S1: Taxonomic Barplot (`04-Taxonomic-barplot.ipynb`)
+
+#### Figure S2: Within individual Boxplots (`05-Individual-Similarity-Boxplots.ipynb`)
 
 
 
