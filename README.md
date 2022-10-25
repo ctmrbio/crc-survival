@@ -45,7 +45,7 @@ pip install pystan=3.4
 
 ### Data Processing and analysis
 
-#### Preprocessing
+#### Preprocessing and processing
 
 ##### Feature Table Construction
 
@@ -55,6 +55,26 @@ The microbiome data was denoised using the standardized pipeline in CTMR bio Amp
 
 The notebook parases the dada2 table for qiime2. It also filters the table to match the metadata and removes features with undefined depths.
 
-##### Diversity Calculations (`02.`
+##### Diversity Calculations (`02.02-Generate-Diversity.ipynb`)
+
+The notebook performs fragment insertion into the [Silva 128 fragment insertion backbone](https://docs.qiime2.org/2022.8/data-resources/#sepp-reference-databases) and uses the phylogenetic tree to construct a feature table. 
+
+The feature table is rarefied to 2500 sequences/sample. Alpha diveristy (observed features, shannon, and Simpson diversity) and beta diversity (Bray Curtis, jaccard, weighted UniFrac and unweighted UniFrac) were calcualted on the rarefied table. Beta diversity measured through Aitchison distance was calcualted using an unrarefied table with a pseudocount of 1.
+
+We also generated the complex tensor factorization (CTF) via Gemelli and rPCA via DEICODE.
+
+##### Stan Differential ranking (`03-Stan-Ranking.ipynb`)
+
+Stan differential rankings are calculated using a linear mixed effects model. If you are unable to get stan to work on your system (or just don't like sleeping with your laptop overnight), output files are in the `data/differential_ranking` folder.
+
+#### Analysis
+
+To standardize display, we defined a set of colors for taxa.
+
+##### Figure S1: Taxonomic Barplot (`04-Taxonomic-barplot.ipynb`)
+
+
+
+
 
 
