@@ -78,7 +78,10 @@ Also generates Table S4 and supplemental file
 
 #### Table S5: Survival by difference in beta diversity metrics (`08-Beta-Survival.ipynb`)
 
+#### Figure 2: Survival by Tissue type (`09-PairedrPCA-Tissue-Survival.ipynb`)
+Also generates Table S6, S7, and supplemental file 2
 
+#### Figure 3: Tumor rPCA (`10-TumorrPCA.ipynb`)
 
 
 
