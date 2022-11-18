@@ -1,0 +1,43 @@
+Column Name	Description	Values	MixS standard	Notes
+sample-id	In house name for the sample	unique integer		
+host_subject_id	Unique per subject identifier	unique integer		
+altitude	The altitude off the group for sampling	0	Yes	
+collection_date	Year of sample collection 	1997-2017	Yes	Date rounded to protect individual privacy
+associated_resource	Link to protocol for sample generation	processed based on https://doi.org/10.1101/286526	Yes	
+env_broad_scale	A broad description of the environment	environment associated with an animal part or small animal [ENVO:01001055]	Yes	
+env_local_scale	A small scale description of the environment	intestine environment [ENVO:2100002]	Yes	
+env_medium	The type of environmental material collected	intestine environment [ENVO:2100002]|intestinal epithelium [UBERON:0001277]|intestinal mucosaUBERON:0001242	Yes	
+geo_loc_name	Geographic location of sampling	Sweden [GAZ:00002729]; Jonkoping County [GAZ:00003802]	Yes	
+lat_lon	Latitude and Longitude where the sample was collected 	57.78 14.16	Yes	
+lib_layout	Sequencing library layout	paired	Yes	
+elev	Elevation at collection site	105	Yes	
+negative_cont_type	type of negative control used	DNA-free PCR mix	Yes	
+nuc_acid_amp	nucleic acid amplification protocol	https://doi.org/10.1101/286526 (1 step PCR)	Yes	
+nuc_acid_ext	nucleic acid extraction protocol	https://doi.org/10.1101/286526	Yes	
+pcr_cond	PCR conditions for sample amplification	"initial denaturation:95C5min,98C_0.333min;annealing:51C_20s;elongation:72C_20s;final elongation:72C_1min;25"	Yes	
+pcr_primers	Primers named for 16S rRNA amplification	FWD:CCTACGGGNGGCWGCAG;REV:GGACTACHVGGGTWTCTAAT	Yes	
+project_name	Internal project name	044 Microbiome in Colorectal Cancer	Yes	
+samp_collec_device	Sample collection device	biopsy	Yes	
+samp_collec_method	sample collection method	collected during resection for primary adenocarcinoma	Yes	
+sample_size	The amount of sample material extracted	missing: not collected	Yes	
+seq_meth	The sequencing method used	Illumina MiSeq [OBI: 0002003]	Yes	
+source_mat_id	In house identifier for the sample	1108	Yes	
+target_gene	Gene used for microbial identification	16S rRNA	Yes	
+target_subfragment	hypervariable region used for microbial identification	V34	Yes	
+host_age	age of participant at time of sample collection	35-39|40-44|45-49|50-54|55-59|60-64|70-74|75-79|80-84|85-89|90-94	Yes	Age is descritized into 5 year blocks for participant privacy
+host_disease_stat	patient diagnosis	colorectal adenocarcinoma [DOID:0050861]	Yes	
+organism	Type of target organism	human gut metagenome	Yes	
+host	Host organism	Homo spaiens	Yes	
+host_body_site	Body site sampled	right colon [UBERON:0008972] | left colon [UBERON:0008971] | rectum [UBERON:0001052]	Yes	
+host_body_product	body material sampled	biopsy [OBI:0002650]	Yes	
+age_cat	Participant age descritized into categories for analysis	0.<60 | 1.60-69 | 2.70-74 | 3.³75		
+sex	Participant biological sex	female | male		
+ana_location	"Tumor anatomical location, descritized for anlaysis"	0. right colon |1.left colon | 2.rectum		
+surgery_year	Surgery period	0.1997-2005 | 1.2006-2010 | 2.2011-2017		
+differentiation_grade	Tumor differentiation grade	high | medium | low		
+asa_cat	"American Society for Anasesologist score, a measure of health and surgical elegibility"			
+long_survival	Did the patient survive 5 or more years after their surgery.	0 | 1		
+tissue_type	The type of tissue sample used	tumour tissue | normal tissue		
+stage_tnm	The TNM stage of the tumor	Stage III | Stage IV		
+radical_surgery	Did the patient receive radical surgery	No | Yes		
+radical_micro	"if the patient underwent radical surgery, was it radical micro surgery. (Patients who did not undergo radical surgery are identified as ""None"")"	None | No | Yes		
