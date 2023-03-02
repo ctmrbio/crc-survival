@@ -4,7 +4,7 @@ Analysis for Debelius et al, "The local tumor microbiome is associated with surv
 
 # Raw Data Avaliability
 
-Raw sequence data and mdetata can be found on ENA under accession <Accession>. 
+Raw sequence data and mdetata can be found on ENA under accession [PRJEB57580](https://www.ebi.ac.uk/ena/browser/view/PRJEB57580). 
 
 # Stata
 
@@ -74,14 +74,13 @@ To standardize display, we defined a set of colors for taxa.
 #### Figure S3: Subject CTF PCA and Table S3 (`06-Pairedr-PCA-Subject-Specific.ipynb`)
 
 #### Figure 1: Comparison of tumor and normal tissue (`07-Paired-rPCA-Tissue-Seperation.ipynb`)
-Also generates Table S4 and supplemental file 
 
 #### Table S5: Survival by difference in beta diversity metrics (`08-Beta-Survival.ipynb`)
 
 #### Figure 2: Survival by Tissue type (`09-PairedrPCA-Tissue-Survival.ipynb`)
-Also generates Table S6, S7, and supplemental file 2
 
 #### Figure 3: Tumor rPCA (`10-TumorrPCA.ipynb`)
 
+#### Figure S4: Replication Cohort (`11-FlemerReplicationCohort.ipynb`)
 
-
+#### Bonus: Alpha diversity (`12-AlphaDiversity.ipynb`)
