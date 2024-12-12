@@ -16,7 +16,7 @@ Microbiome data was prepared and processed through Jupyter notebooks.
 
 ## Installation
 
-This code was initially run in a qiime2-2022.11 enviroment with plugins for [gemelli](https://library.qiime2.org/plugins/gemelli/28/), [DEICODE](), and [empress](). 
+This code was initially run in a qiime2-2022.11 enviroment with plugins for [gemelli](https://library.qiime2.org/plugins/gemelli/28/), DEICODE, and empress. 
 
 To replicate the qiime2 enviroment, install qiime2 2021.11 according to the [installation instructions](https://docs.qiime2.org/2021.11/install/) which are most appropriate for your enviroment. (Click through when it warns you there is a new version!)
 
@@ -33,7 +33,7 @@ qiime dev refresh-cache
 
 ### PyStan
 
-Differential ranking requires [pystan](https://pystan.readthedocs.io/en/latest/index.html); we used pystan 3.4. This is operation system dependent; our group was able to get pystan to work with Mac OS 15.2 but unable to coerce it on a linus system. (If you dont want to experiment with the pystan run, the files are included.)
+Differential ranking requires [pystan](https://pystan.readthedocs.io/en/latest/index.html); we used pystan 3.4. This is operation system dependent; our group was able to get pystan to work with Mac OS 15.2 but unable to coerce it on a linux system. (If you dont want to experiment with the pystan run, the files are included.)
 
 ```bash
 pip install pystan=3.4
